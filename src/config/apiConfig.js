@@ -1,9 +1,9 @@
 let apiUrl;
 
 if (process.env.NODE_ENV === "production") {
-  apiUrl = "https://e-commerce-api-mqlp.onrender.com/";
+  apiUrl = "https://spotifyserver.onrender.com/api/v1/";
 } else {
-  apiUrl = "http://localhost:3000/api/v1/";
+  apiUrl = "https://spotifyserver.onrender.com/api/v1/";
 }
 
 export { apiUrl };
