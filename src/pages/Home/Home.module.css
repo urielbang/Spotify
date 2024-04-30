@@ -1,0 +1,32 @@
+.container {
+  background-color: #131313;
+
+  border-radius: 0.5rem;
+  color: aliceblue;
+  overflow-y: scroll;
+  display: grid;
+  height: 100vh;
+  grid-template-areas:
+    "main main main main home"
+    "main main main main nav"
+    "main main main main nav"
+    "main main main main nav"
+    "player player player player player";
+}
+
+.container main {
+  grid-area: main;
+  overflow-y: scroll;
+}
+
+.container menu {
+  grid-area: home;
+}
+
+.container aside {
+  grid-area: nav;
+}
+
+.musicPlayer {
+  grid-area: player;
+}

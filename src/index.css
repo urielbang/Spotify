@@ -1,0 +1,129 @@
+/* CSS Reset */
+
+/* Box-sizing border-box for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove default margins and paddings */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default styling for anchor tags */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Set base font size and family */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: hsla(0, 0%, 100%, 0.3);
+  }
+
+  background-color: black;
+}
+
+/* Optional: Additional resets for form elements */
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Optional: Remove input spinners in certain browsers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Optional: Remove default button styles */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Optional: Reset images to ensure they never extend beyond their container */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#root {
+  position: fixed;
+  max-height: 100%;
+  min-width: 100vw;
+  background-color: black;
+  color: aliceblue;
+  display: grid;
+  grid-template-areas:
+    "main main main main nav"
+    "main main main main nav"
+    "main main main main nav"
+    "player player player player player";
+  gap: 0.5rem;
+  padding: 2px;
+}
+
+.aside {
+  grid-area: nav;
+  max-height: 84vh;
+}
+.containerArtistFields {
+  display: flex;
+  flex-direction: column;
+  min-width: 70vw;
+  overflow-y: scroll;
+  margin-left: 1rem;
+
+  flex-wrap: wrap;
+}
+.containerCards {
+  display: flex;
+
+  margin-top: 1rem;
+
+  flex-wrap: wrap;
+
+  gap: 2rem;
+}

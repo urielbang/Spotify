@@ -1,0 +1,88 @@
+.mediaContainer {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  
+}
+
+.mediaCard {
+  display: flex;
+  flex-direction: column;
+  /* background-color: #181818; */
+  background-color: #1b1b1b;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 11.4rem;
+  height: 17rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.5s;
+  justify-content: center;
+  
+}
+
+.mediaCard:hover {
+  /* transform: scale(1.00); */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.mediaImageContainer {
+  width: 100%;
+  padding-top: 100%; /* This maintains a 1:1 aspect ratio */
+  position: relative;
+  left: 13px;
+}
+
+.mediaImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+  height: 85%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+}
+
+.playIcon {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-20%, -100%);
+  font-size: 3.7vw;
+
+  color: green;
+
+  display: none;
+  margin: 0;
+  transition: font-size 0.5s;
+}
+
+.mediaCard:hover .playIcon {
+  display: flex;
+  width: 100%;
+}
+.playIcon:hover {
+  font-size: 4vw;
+}
+.mediaCard:hover {
+  background-color: hsla(0, 0%, 100%, 0.3);
+}
+
+.mediaInfo {
+  padding: 0.5rem;
+  color: white;
+}
+
+.mediaTitle {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+}
+
+.mediaReleaseDate {
+  font-size: 0.875rem;
+  color: #b3b3b3;
+}
